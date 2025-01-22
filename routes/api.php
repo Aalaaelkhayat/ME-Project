@@ -44,7 +44,6 @@ Route::get('/users_show_less/{id}', [UserController::class, 'showLess']);
 Route::get('/users_token/{token}', [UserController::class, 'getUserByToken']);
 Route::get('/users_token_show_less/{token}', [UserController::class, 'getUserByTokenLess']);
 Route::get('/users/nearby', [UserController::class, 'findNearbyUsers']);
-// Route::put('/users', [UserController::class, 'store']);
 Route::put('/users/{id}', [UserController::class, 'update']);
 Route::post('/users_fcm_token/{id}', [UserController::class, 'updateFcmToken']);
 Route::delete('/users/{id}', [UserController::class, 'destroy']);
@@ -124,4 +123,5 @@ Route::delete('/bookings/{id}', [BookingController::class, 'destroy']);
 Route::post('/user/upload-image', [UserController::class, 'uploadImage']); //Upload_image_of_user
 Route::post('/user/update-image', [UserController::class, 'updateImage']); //Update_image_of_user
 
+//change_password
 Route::post('/change-password', [PasswordController::class, 'changePassword']);
